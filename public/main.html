@@ -6,7 +6,7 @@
 	function calculateRate() {
 		console.log("Starting calculateRate");
 
-		var weight = document.getElementsByName("weightOfItem").text;
+		var weight = document.getElementsByName("weightOfItem");
 		var typeOf = document.getElementsByName("type01");
 
 		console.log(weight + " : " + typeOf);
@@ -19,14 +19,14 @@
 
 <h1>Form:</h1>
 
-<form >
+<form onsubmit="calculateRate()">
 	Weight:<br>
 	<input type="text" name="weightOfItem"></form><br>
 	<input type="radio" name="type01" value="stamped" checked>Letters (Stamped) <br>
   	<input type="radio" name="type01" value="metered">Letters (Metered)<br>
   	<input type="radio" name="type01" value="flats">Large Envelopes (Flats)<br>
   	<input type="radio" name="type01" value="firstClass">First-Class<br>
-  	<input type="button" onclick="calculateRate()" value="Submit">
+  	<input type="submit" value="Submit">
 </form>
 
 
