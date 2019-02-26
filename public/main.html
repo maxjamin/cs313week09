@@ -63,18 +63,8 @@
 			else {cost= "To much weight";}
 			
 		}
-
-
-		console.log("The cost is " + cost + "\n");
-		//pass vars to ejs file
-
-		var mail = {weightOf:weight, typeOfLetter:typeOf, costOf:cost};
-		var express = require('express');
-		var app = express();
-
-		app.get('/', function(req, res) {
-		    res.render('response', { mail : mail });
-		});
+		//pass data to ejs file.
+		app.render('pages/response', {result: cost});
 		
 	}
 
