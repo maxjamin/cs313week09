@@ -67,17 +67,12 @@
 
 		console.log("The cost is " + cost + "\n");
 		//pass vars to ejs file
-		var express = require('express');
-		var app = express();
-		
-		app.get('/', function(req, res) {
+
+		app.get('/response', function(req, res) {
 			var mail = {name:typeOf, totalWeight:weight, costOf:cost};
-			var tagline = "the mail";
 
 			res.render('pages/response', {
-				mail: mail, 
-				tagline: tagline
-			});
+				mail: mail });
 		}); 
 	}
 
