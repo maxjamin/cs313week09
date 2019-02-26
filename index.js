@@ -13,7 +13,7 @@ express()
 
 
 
-function calculateRate() {
+function calculateRate(request, response) {
 		//console.log("Starting calculateRate");
 		/*
 		var weight = request.query.weightOfItem; //document.getElementById("weightOfItem").value;
