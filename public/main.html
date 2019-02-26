@@ -68,14 +68,14 @@
 		console.log("The cost is " + cost + "\n");
 		//pass vars to ejs file
 		var express = require('express');
-		var app = express();
-		
-		app.get('/response', function(req, res) {
-			var mail = {name:typeOf, totalWeight:weight, costOf:cost};
+		var app     = express();
+		var server  = app.listen(3000);
 
-			res.render('pages/response', {
-				mail: mail });
-		}); 
+		app.locals.myVar = cost;
+
+		app.get('/pages', function(req, res) {
+		  res.render('pages/response');
+		});
 	}
 
 </script>
