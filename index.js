@@ -26,6 +26,7 @@ function calculateRate() {
 
 		console.log("Weight and typeOf " + weight + " " + typeOf +"\n")''
 
+
 		//letter Stamped 
 		if(typeOf == "stamped"){
 			console.log("letter is stamped");
