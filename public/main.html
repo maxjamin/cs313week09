@@ -69,7 +69,7 @@
 		//pass vars to ejs file
 		var mail = {weightOf:weight, typeOfLetter:typeOf, costOf:cost};
 		app.get('/', function(req, res) {
-  			return res.render('response', mail);
+  			res.render('response', mail);
 		});
 
 	}
