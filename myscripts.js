@@ -1,3 +1,4 @@
+
 function calculateRate() {
 		console.log("Starting calculateRate");
 
