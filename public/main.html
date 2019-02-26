@@ -21,6 +21,7 @@
 			else if(weight > 1 && weight <= 2) {cost=0.7; }
 			else if(weight > 2 && weight <= 3) {cost=0.85; }
 			else if(weight > 3 && weight <= 3.5) {cost= 1.00; }
+			else {cost = "To much weight"; }
 		}
 		//letter metered
 		if(typeOf == "metered"){
@@ -65,6 +66,19 @@
 
 
 		console.log("The cost is " + cost + "\n");
+		//pass vars to ejs file
+		var express = require('express');
+		var app = express();
+		
+		app.get('/', function(req, res) {
+			var mail = {name:typeOf, totalWeight:weight, costOf:cost};
+			var tagline = "the mail";
+
+			res.render('pages/response', {
+				mail: mail, 
+				tagline: tagline
+			});
+		}); 
 	}
 
 </script>
