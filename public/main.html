@@ -67,6 +67,7 @@
 
 		console.log("The cost is " + cost + "\n");
 		//pass vars to ejs file
+		var app = require('express')();
 		var mail = {weightOf:weight, typeOfLetter:typeOf, costOf:cost};
 		app.get('/', function(req, res) {
   			res.render('response', mail);
