@@ -4,9 +4,8 @@
 <body>
 
 <h1>Form:</h1>
-<script type="text/javascript" src="myscripts.js"></script>
 
-<form>
+<form action="/compute" method="get">
 	Weight (oz.):<br>
 	<input type="text" id="weightOfItem"></form><br>
   	<select id="postalType">
@@ -15,7 +14,7 @@
   		<option value="flats">Large Envelopes (Flats)</option>
   		<option value="firstClass">First-Class Package Service—Retail</option>
 	</select><br><br>
-  	<input type="button" value="Submit" onclick="calculateRate()">
+  	<input type="submit" value="Submit">
 </form>
 
 </body>
