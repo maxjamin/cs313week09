@@ -64,6 +64,8 @@
 			
 		}
 		//pass data to ejs file.
+
+		var app = express();
 		app.get('/response', function(req, res) {
    			request('https://fast-falls-88929.herokuapp.com/response', function(data) {
       			res.render('pages/response', {costOf: cost});
