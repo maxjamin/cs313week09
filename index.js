@@ -11,4 +11,11 @@ express()
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
 
+app.get('/compute', calculateRate);
 
+
+function calculateRate() {
+		console.log("Starting calculateRate");
+
+
+}
