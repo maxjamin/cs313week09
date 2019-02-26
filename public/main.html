@@ -5,14 +5,14 @@
 
 <h1>Form:</h1>
 
-<form action="javascript:calculateRate(); return false;">
+<form>
 	Weight:<br>
 	<input type="text" name="weightOfItem"></form><br>
 	<input type="radio" name="type01" value="stamped" checked>Letters (Stamped) <br>
   	<input type="radio" name="type01" value="metered">Letters (Metered)<br>
   	<input type="radio" name="type01" value="flats">Large Envelopes (Flats)<br>
   	<input type="radio" name="type01" value="firstClass">First-Class<br>
-  	<input type="submit" value="Submit">
+  	<input type="button" value="Submit" onclick="calculateRate()">
 </form>
 
 <script type="text/javascript">
@@ -20,8 +20,8 @@
 	function calculateRate() {
 		console.log("Starting calculateRate");
 
-		var weight = document.getElementsByName("weightOfItem");
-		var typeOf = document.getElementsByName("type01");
+		var weight = document.getElementsByName("weightOfItem").value;
+		var typeOf = document.getElementsByName("type01").value;
 
 		console.log(weight + " : " + typeOf);
 
