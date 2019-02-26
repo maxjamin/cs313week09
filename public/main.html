@@ -20,11 +20,11 @@
 			if(weight <= 1) { cost=0.55; }
 			else if(weight > 1 && weight <= 2) {cost=0.7; }
 			else if(weight > 2 && weight <= 3) {cost=0.85; }
-			else {weight= 3.5; }
+			else if(weight > 3 && weight <= 3.5) {cost= 3.5; }
 		}
 
 
-		console.log("The cost is " + cost + "<br>");
+		console.log("The cost is " + cost + "\n");
 	}
 
 </script>
