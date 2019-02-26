@@ -19,7 +19,7 @@ function calculateRate() {
 		var weight = request.query.weightOfItem; //document.getElementById("weightOfItem").value;
 		var typeOf = request.query.postalType; //document.getElementById("postalType").value;
 		var cost = 0;
-
+		/*
 		//letter Stamped 
 		if(typeOf == "stamped"){
 			//console.log("letter is stamped");
@@ -72,7 +72,7 @@ function calculateRate() {
 		}
 		//console.log("The cost is: " + cost);
 
-		
+		*/
 	
 
 }
