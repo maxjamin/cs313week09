@@ -11,18 +11,27 @@
 
 		var weight = document.getElementById("weightOfItem").value;
 		var typeOf = document.getElementById("postalType").value;
+		var cost = 0;
 
 		//letter Stamped 
 		if(typeOf == "stamped"){
 			console.log("letter is stamped");
+
+			if(weight <= 1) { cost=0.55; }
+			else if(weight > 1 && weight <= 2) {cost=0.7; }
+			else if(weight > 2 && weight <= 3) {cost=0.85; }
+			else {weight= 3.5; }
 		}
+
+
+		console("The cost is " + cost + "<br>");
 	}
 
 </script>
 
 
 <form>
-	Weight:<br>
+	Weight (oz.):<br>
 	<input type="text" id="weightOfItem"></form><br>
   	<select id="postalType">
   		<option value="stamped">Letters (Stamped)</option>
