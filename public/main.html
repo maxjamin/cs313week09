@@ -10,7 +10,7 @@
 		console.log("Starting calculateRate");
 
 		var weight = document.getElementById("weightOfItem").value;
-		var typeOf = document.getElementsByName("type01").value;
+		var typeOf = document.getElementbyId("postalType").value;
 
 		console.log(weight + " : " + typeOf);
 
@@ -23,9 +23,12 @@
 	Weight:<br>
 	<input type="text" id="weightOfItem"></form><br>
 	<input type="radio" name="type01" value="stamped" checked>Letters (Stamped) <br>
-  	<input type="radio" name="type01" value="metered">Letters (Metered)<br>
-  	<input type="radio" name="type01" value="flats">Large Envelopes (Flats)<br>
-  	<input type="radio" name="type01" value="firstClass">First-Class<br>
+  	<select id="postalType">
+  		<option value="stamped">Letters (Stamped)</option>
+  		<option value="metered">Letters (Metered)</option>
+  		<option value="flats">Large Envelopes (Flats)</option>
+  		<option value="firstClass">First-Class Package Service—Retail</option>
+	</select> 
   	<input type="button" value="Submit" onclick="calculateRate()">
 </form>
 
