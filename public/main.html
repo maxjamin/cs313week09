@@ -12,8 +12,10 @@
 		var weight = document.getElementById("weightOfItem").value;
 		var typeOf = document.getElementById("postalType").value;
 
-		console.log(weight + " : " + typeOf);
-
+		if(weight != "")
+		{
+			console.log(weight + " : " + typeOf);
+		}
 	}
 
 </script>
@@ -27,7 +29,7 @@
   		<option value="metered">Letters (Metered)</option>
   		<option value="flats">Large Envelopes (Flats)</option>
   		<option value="firstClass">First-Class Package Service—Retail</option>
-	</select><br>
+	</select><br><br>
   	<input type="button" value="Submit" onclick="calculateRate()">
 </form>
 
