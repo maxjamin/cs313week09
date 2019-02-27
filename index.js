@@ -11,7 +11,7 @@ express()
   .get('/response', (req, res) => res.render('pages/response'))
 
   .get('/getMail', (req, res) => {
-  	res.send('hello world');
+  	res.send(req.query.operation);
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
