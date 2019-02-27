@@ -20,10 +20,6 @@ express()
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
 
-
-
-
-
 function calculateRate(res, postalType, weightOfItem) {
 		console.log("Starting calculateRate");
 
@@ -82,6 +78,6 @@ function calculateRate(res, postalType, weightOfItem) {
 			
 		}*/
 
-		var par = postalType; //{weight: weight, typeOf: typeOf, cost: cost};
+		var par = {postalType: postalType, weightOfItem: weightOfItem}; //{weight: weight, typeOf: typeOf, cost: cost};
 		res.render('pages/response', par);
 }
