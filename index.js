@@ -9,8 +9,8 @@ express()
   .get('/', (req, res) => res.render('pages/index'))
   .get('/response', (req, res) => res.render('pages/response'))
   .get('/getMail', function(req, res) {
-  	res.send(request.query.postalType);
-  	
+  	console.log(request.query.postalType);
+
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
