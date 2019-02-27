@@ -78,6 +78,6 @@ function calculateRate(res, postalType, weightOfItem) {
 			
 		}
 
-		var par = {weight: weight, typeOf: typeOf, cost: cost};
+		var par = {weight: weightOfItem, typeOf: postalType, cost: cost};
 		res.render('pages/response', par);
 }
