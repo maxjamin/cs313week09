@@ -23,7 +23,7 @@ express()
 function calculateRate(res, postalType, weightOfItem) {
 		console.log("Starting calculateRate");
 
-		/*var weight = weightOfItem;
+		var weight = weightOfItem;
 		var typeOf = postalType;
 		var cost = 0;
 
@@ -76,8 +76,8 @@ function calculateRate(res, postalType, weightOfItem) {
 			else if(weight > 12 && weight <= 13) {cost=5.71; }
 			else {cost= "To much weight";}
 			
-		}*/
+		}
 
-		var par = {postalType: postalType, weightOfItem: weightOfItem}; //{weight: weight, typeOf: typeOf, cost: cost};
+		var par = {weight: weight, typeOf: typeOf, cost: cost};
 		res.render('pages/response', par);
 }
