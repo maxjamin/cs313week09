@@ -11,7 +11,7 @@ express()
   .get('/response', (req, res) => res.render('pages/response'))
 
   .get('/getMail', (req, res) => {
-  	res.send(req.query.weightOfItem);
+  	res.send(req.query.postalType);
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
