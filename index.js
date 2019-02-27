@@ -77,11 +77,6 @@ function calculateRate() {
 			else {cost= "To much weight";}
 			
 		}
-		console.log("The cost is: " + cost);
-		//pass data to ejs file.
-		app.get('/response', function(req, res) {
-    		//var myVar = 1;
-    		res.render('pages/response', {cost : cost });
-		});
+
 		
 	}
