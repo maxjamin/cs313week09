@@ -8,7 +8,7 @@ express()
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
   .get('/response', (req, res) => res.render('pages/response'))
-  .get('/public/myscripts', calculateRate)
+  .get('/getMail', calculateRate)
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
 
